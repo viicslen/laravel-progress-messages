@@ -46,7 +46,7 @@ class ProgressWithMessagesRenderer extends Renderer
             'submit' => $renderer->box(
                 $this->dim($this->truncate($progress->label, $progress->terminal()->cols() - 6)),
                 $this->dim($filled),
-                info: $progress->progress . '/' . $progress->total,
+                info: $progress->progress.'/'.$progress->total,
             ),
 
             'error' => $renderer
@@ -54,7 +54,7 @@ class ProgressWithMessagesRenderer extends Renderer
                     $this->truncate($progress->label, $progress->terminal()->cols() - 6),
                     $this->dim($filled),
                     color: 'red',
-                    info: $progress->progress . '/' . $progress->total,
+                    info: $progress->progress.'/'.$progress->total,
                 ),
 
             'cancel' => $renderer
@@ -62,7 +62,7 @@ class ProgressWithMessagesRenderer extends Renderer
                     $this->truncate($progress->label, $progress->terminal()->cols() - 6),
                     $this->dim($filled),
                     color: 'red',
-                    info: $progress->progress . '/' . $progress->total,
+                    info: $progress->progress.'/'.$progress->total,
                 )
                 ->error($progress->cancelMessage),
 
@@ -70,7 +70,7 @@ class ProgressWithMessagesRenderer extends Renderer
                 ->box(
                     $this->cyan($this->truncate($progress->label, $progress->terminal()->cols() - 6)),
                     $this->dim($filled),
-                    info: $progress->progress . '/' . $progress->total,
+                    info: $progress->progress.'/'.$progress->total,
                 )
                 ->when(
                     $progress->hint,
